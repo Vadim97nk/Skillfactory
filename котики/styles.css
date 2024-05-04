@@ -1,0 +1,74 @@
+body {
+  background-image: url(background2.jpg);
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-right: 200px;
+}
+
+.title {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: 7vh;
+  background-color: black;
+  background-image: linear-gradient(90deg, rgba(111,17,136,1) 0%, rgba(120,191,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.load-button {
+  padding: 10px 20px;
+  font-size: 3vh;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(90deg, rgba(0,250,255,1) 0%, rgba(40,166,247,1) 100%);
+  color: white;
+  cursor: pointer;
+  font-family: "Montserrat";
+  margin: 20px auto;
+  display: block;
+}
+
+.load-button:hover {
+  color: #790088;
+}
+
+.container {
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  margin: 10px;
+  width: 300px;
+  height: auto;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px dotted black;
+  border-radius: 50%;
+  display: none;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
