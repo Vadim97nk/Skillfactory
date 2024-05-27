@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.5 Практика</title>
+</head>
+<body style="display: flex; justify-content: center;">
+    <button class="btn" style="background-color: orange; padding: 10px; border: none; color: white; font-weight: 700;">Узнать размер экрана</button>
+    <script>
+        let btn = document.querySelector('.btn');
+        btn.addEventListener('click', () => {
+        let width = document.documentElement.clientWidth;
+        let height = document.documentElement.clientHeight;
+        alert("Размер вашего экрана:"+width+"x"+height+ "пикселей");
+    })
+    </script>
+</body>
+</html>

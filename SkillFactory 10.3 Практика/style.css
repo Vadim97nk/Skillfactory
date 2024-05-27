@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+  }
+  .btn {
+    display: flex;
+    width: 110px;
+    justify-content: flex-start;
+    background-color: lightblue;
+    padding: 10px;
+    border: none;
+    position: relative;
+  }
+  .btn__text {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .btn__icon {
+    position: absolute;
+    right: 10px;
+  }
+  .btn__icon2 {
+    position: absolute;
+    right: 10px;
+  }
+  
+  .close {
+    display: none;
+  }
