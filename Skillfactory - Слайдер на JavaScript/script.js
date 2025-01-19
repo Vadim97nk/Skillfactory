@@ -1,4 +1,4 @@
-let hotels = [{
+const hotels = [{
     url: "image.png",
     title: "Rostov-on-Don, Admiral",
     city: "Rostov-on-Don LCD admiral",
@@ -24,10 +24,10 @@ let hotels = [{
 function initSlider() {
     if (!hotels || !hotels.length) return;
 
-    let sliderImages = document.querySelector(".twosection__image");
-    let sliderArrows = document.querySelector(".onesection__icon");
-    let sliderDots = document.querySelector(".icon__circles");
-    let sliderLinks = document.querySelector(".twosection__links");
+    const sliderImages = document.querySelector(".twosection__image");
+    const sliderArrows = document.querySelector(".onesection__icon");
+    const sliderDots = document.querySelector(".icon__circles");
+    const sliderLinks = document.querySelector(".twosection__links");
 
     initImages();
     initArrows();
@@ -37,7 +37,7 @@ function initSlider() {
 
     function initImages() {
         hotels.forEach((image, index) => {
-          let imageDiv = `<div class="image n${index} ${index === 0? "active" : ""}" style="background-image:url(${hotels[index].url});" data-index="${index}"></div>`;
+          imageDiv = `<div class="image n${index} ${index === 0? "active" : ""}" style="background-image:url(${hotels[index].url});" data-index="${index}"></div>`;
           sliderImages.innerHTML += imageDiv;
         });
       }
@@ -59,7 +59,7 @@ function initSlider() {
 
       function initDots() {
         hotels.forEach((image, index) => {
-          let dot = `<div class="slider__dots-item n${index} ${index === 0? "active" : ""}" data-index="${index}"></div>`;
+          dot = `<div class="slider__dots-item n${index} ${index === 0? "active" : ""}" data-index="${index}"></div>`;
           sliderDots.innerHTML += dot;
         });
         sliderDots.querySelectorAll(".slider__dots-item").forEach(dot => {
@@ -71,7 +71,7 @@ function initSlider() {
 
       function initLinks() {
         hotels.forEach((image, index) => {
-          let link = `<div class="slider__link-item n${index} ${index === 0? "activelink" : ""}" data-index="${index}">${hotels[index].title}</div>`;
+          link = `<div class="slider__link-item n${index} ${index === 0? "activelink" : ""}" data-index="${index}">${hotels[index].title}</div>`;
           sliderLinks.innerHTML += link;
         });
         sliderLinks.querySelectorAll(".slider__link-item").forEach(link => {
@@ -92,13 +92,13 @@ function initSlider() {
       }
 
       function initTitles() {
-        let cityDiv = `<p class="info__main_text-city">${hotels[0].city}</p>`;
+        cityDiv = `<p class="info__main_text-city">${hotels[0].city}</p>`;
         document.querySelector(".city").innerHTML += cityDiv;
-        let areaDiv = `<p class="info__main_text-area">${hotels[0].area}</p>`;
+        areaDiv = `<p class="info__main_text-area">${hotels[0].area}</p>`;
         document.querySelector(".area").innerHTML += areaDiv;
-        let timeDiv = `<p class="info__main_text-time">${hotels[0].time}</p>`;
+        timeDiv = `<p class="info__main_text-time">${hotels[0].time}</p>`;
         document.querySelector(".time").innerHTML += timeDiv;
-        let costDiv = `<p class="info__main_text-cost">${hotels[0].cost}</p>`;
+        costDiv = `<p class="info__main_text-cost">${hotels[0].cost}</p>`;
         document.querySelector(".cost").innerHTML += costDiv;
       }
 
